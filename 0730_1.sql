@@ -1,0 +1,18 @@
+# DATABASE 안에 TABLE 생성
+
+CREATE TABLE EMPS(
+	ID CHAR(10),
+	NAME CHAR(20),
+	AGE INT
+);
+
+# Table 에 데이터 입력
+INSERT INTO EMPS VALUES('ID01','이말숙',20);
+INSERT INTO EMPS VALUES('ID02','이말숙',30);
+INSERT INTO EMPS VALUES('ID03','이말숙',40);
+
+# Table에 데이터 조회
+SELECT * FROM EMPS;
+
+# Table을 삭제
+DROP TABLE EMPS;
