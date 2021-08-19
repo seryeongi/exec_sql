@@ -1,0 +1,45 @@
+DROP TABLE udata;
+DROP TABLE res;
+
+# --------------------------------------------------------------------
+CREATE TABLE udata(
+	num INT,
+	id VARCHAR(10),
+	schooltype INT,
+	majorcate INT,
+	age INT,
+	intern INT,
+	toeic INT,
+	tosp INT,
+	train INT,
+	jobseek INT,
+	cert INT,
+	jobsearch INT,
+	yrwish INT,
+	wishhr INT,
+	wishsalary INT,
+	jobgradu INT,
+	liveexp INT	
+);
+
+ALTER TABLE udata ADD PRIMARY KEY (num);
+ALTER TABLE udata MODIFY num INT AUTO_INCREMENT;
+ALTER TABLE udata AUTO_INCREMENT = 1;
+ALTER TABLE udata ADD CONSTRAINT FOREIGN KEY (id) REFERENCES users(user_id);
+
+# --------------------------------------------------------------------
+
+CREATE TABLE res(
+	num INT,
+	id VARCHAR(20),
+	result VARCHAR(200) NOT NULL,
+	resdate DATE
+);
+
+ALTER TABLE res ADD PRIMARY KEY (num);
+ALTER TABLE res MODIFY num INT AUTO_INCREMENT;
+ALTER TABLE res AUTO_INCREMENT = 1;
+ALTER TABLE res ADD CONSTRAINT FOREIGN KEY (id) REFERENCES users(user_id);
+# --------------------------------------------------------------------
+
+
